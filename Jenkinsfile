@@ -1,8 +1,11 @@
 pipeline {
-    agent {
-        docker { image 'node:14-alpine' }
-    }
-    agent { any { image 'maven:3.3.3' } }
+   
+    agent { 
+        
+        any { image 'maven:3.3.3' }
+        docker { image 'node:14-alpine' }  
+          
+          }
    /* environment {
         NEXUS_VERSION="nexus3"
         NEXUS_PROTOCOL="http"
