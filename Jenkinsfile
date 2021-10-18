@@ -52,6 +52,7 @@ pipeline {
         
         sh "wget --user=admin --password=admin123 http://localhost:8081/repository/maven-releases/es/macero/dev/spring-boot-restcontroller-example/3.3.3/spring-boot-restcontroller-example-3.3.3-debug.jar"
         sh "mv spring-boot-restcontroller-example-3.3.3-debug.jar devops.jar"
+        sh "docker push asunder123/springbootrest:tagname"
             
         
         }
