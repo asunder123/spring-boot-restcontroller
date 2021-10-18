@@ -67,6 +67,12 @@ Initating Attack:
 Confirmation of Shutdown via Logs :
 ![image](https://user-images.githubusercontent.com/50335583/135633977-b5e56f46-672c-4f59-8a53-0ac0c1f1d07e.png)
 
+#CPU Attack wit hMemory Assaults:
+![image](https://user-images.githubusercontent.com/50335583/137796659-7b05d17c-4bf6-48c6-a8e9-5021a4e81a7b.png)
+
+![image](https://user-images.githubusercontent.com/50335583/137796607-ed60ca8b-c759-48cc-9476-2cc811b34c4e.png)
+
+
 
 
 
