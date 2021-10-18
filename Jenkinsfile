@@ -2,8 +2,7 @@ pipeline {
    
     agent { 
         
-        any { image 'maven:3.3.3' }
-        docker { image 'node:14-alpine' }  
+        any { image 'maven:3.3.3' } 
           
           }
    /* environment {
