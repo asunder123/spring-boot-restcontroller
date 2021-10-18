@@ -65,6 +65,7 @@ pipeline {
                 docker { image 'java:8' }
             }
             steps {
+                sh 'docker login -u 'asunder123' -p 'Docker@123'
                 sh 'java --version'
             }
         }
