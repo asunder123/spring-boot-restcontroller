@@ -15,15 +15,6 @@ pipeline {
         //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
   }*/
     
-      environment { 
-
-        registry = "asunder123/springbootrest" 
-
-        registryCredential = 'asunder123' 
-
-        dockerImage = '' 
-
-    }
     
    
 
@@ -63,9 +54,20 @@ pipeline {
             
         
         }
+           
+          
             
             
     }
+       
+        stage('Docker') {
+            agent {
+                docker { image 'java:8' }
+            }
+            steps {
+                sh 'java --version'
+            }
+        }
         
          
             }
