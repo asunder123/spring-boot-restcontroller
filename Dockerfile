@@ -1,5 +1,5 @@
 FROM java:8
 WORKDIR /
-ADD *.jar docker.jar
-EXPOSE 8083
-CMD java - jar docker.jar
+ADD *.jar *.jar
+EXPOSE 8082
+CMD java - jar *.jar
