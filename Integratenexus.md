@@ -17,5 +17,8 @@ Uploaded Jar into Nexus From Windows WSL Jenkins Required update of Credentials 
 ![image](https://user-images.githubusercontent.com/50335583/137798586-5a5adfd4-fae8-484f-a6e0-8ef7f89adec0.png)
 
 
+## Build Pipeline View in Jenkins :
+
+![image](https://user-images.githubusercontent.com/50335583/137798805-8e57d324-366f-4d49-90cd-d3a42e259c05.png)
 
 
