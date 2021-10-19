@@ -3,4 +3,4 @@ ADD *.jar /
 EXPOSE 8085
 FROM openjdk:8
 EXPOSE 8084	
-CMD [ "java", "-jar *.jar" ]
+CMD java -jar *.jar
