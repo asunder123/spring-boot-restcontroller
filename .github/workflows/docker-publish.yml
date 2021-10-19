@@ -66,3 +66,8 @@ jobs:
         working-directory: ${{runner.workspace-directory}}
         shell: bash
         run: sudo docker images
+        
+      - name: Run docker image
+        working-directory: ${{runner.workspace-directory}}
+        shell: bash
+        run: sudo docker run 37f26f132ea0 -8083:8083
