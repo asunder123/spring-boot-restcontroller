@@ -1,6 +1,5 @@
-FROM ubuntu:18.04
-ADD *.jar /
-EXPOSE 8085
-FROM openjdk:8
-EXPOSE 8084	
-CMD java -jar *.jar
+FROM java:8
+WORKDIR /
+ADD *.jar demo.jar
+EXPOSE 8080
+CMD java - jar demo.jar
