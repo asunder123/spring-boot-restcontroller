@@ -70,4 +70,4 @@ jobs:
       - name: Run docker image
         working-directory: ${{runner.workspace-directory}}
         shell: bash
-        run: sudo docker run 37f26f132ea0 -8083:8083
+        run: sudo docker run  -p 8083:8083
