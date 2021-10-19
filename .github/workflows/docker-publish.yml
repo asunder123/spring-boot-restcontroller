@@ -74,4 +74,5 @@ jobs:
               sudo apt install openjdk-8-jre-headless
               sudo docker login -u asunder123 -p Docker@123
               sudo ls -ltr
+              sudo docker build .
               sudo docker run  -p 8083:8083 ghcr.io/asunder123/spring-boot-restcontroller:master
