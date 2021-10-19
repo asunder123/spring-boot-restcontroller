@@ -72,4 +72,4 @@ jobs:
         shell: bash
         run: |
               sudo docker login -u asunder123 -p Docker@123
-              sudo docker run  -p 8083:8083 ghcr.io/asunder123/spring-boot-restcontroller
+              sudo docker run  -p 8083:8083 ghcr.io/asunder123/spring-boot-restcontrolle:master
