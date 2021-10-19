@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 ARG JAR_FILE=*.jar
 ENTRYPOINT ["java"]
-CMD java -cp bin es.macero.dev.SpringBootRestcontrollerExampleApplication
+CMD java -classpath src/main/java/es/macero/dev Main
 CMD ["-jar",*.jar]
 EXPOSE 8085
