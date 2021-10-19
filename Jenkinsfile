@@ -65,7 +65,7 @@ pipeline {
                 docker { image 'java:8' }
             }
             steps {
-                sh 'docker build .'
+                sh 'docker --help'
             }
         }
         
