@@ -66,7 +66,7 @@ pipeline {
             }
             steps {
                 sh 'docker login -u asunder123 -p Docker@123'
-                sh 'java --version'
+                sh 'docker build .'
             }
         }
         
