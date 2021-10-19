@@ -1,11 +1,6 @@
-FROM openjdk:16-alpine3.13
-
-WORKDIR /
-
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-RUN ./mvnw dependency:go-offline
-
-COPY src ./src
-
-CMD ["./mvnw", "spring-boot:run"]
+FROM ubuntu:18.04
+ADD *.jar /
+EXPOSE 8085
+FROM openjdk:8
+EXPOSE 8084	
+CMD [ "java", "java -jar *.jar" ]
