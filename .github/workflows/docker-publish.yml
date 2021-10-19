@@ -62,7 +62,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       
-      - name: List docker processes
+      - name: List docker images
         working-directory: ${{runner.workspace-directory}}
         shell: bash
-        run: sudo docker ps -a
+        run: sudo docker images
