@@ -1,5 +1,5 @@
-
-FROM openjdk:8-jdk
-COPY *.jar /app/service.jar
-CMD ["java", "-jar", "/app/service.jar"]
-EXPOSE 8084
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8085
