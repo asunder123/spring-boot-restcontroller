@@ -60,14 +60,7 @@ pipeline {
             
     }
        
-        stage('Docker') {
-            agent {
-                docker { image 'java:8' }
-            }
-            steps {
-                sh 'docker'
-            }
-        }
+       
         
          
             }
