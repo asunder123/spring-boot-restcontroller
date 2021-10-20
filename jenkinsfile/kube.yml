@@ -1,0 +1,61 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+   - name: install docker
+     apt: 
+       name: docker.io
+       state: present
+       update_cache: true     
+               
+              
+   - name: install apt transport HTTPS
+     apt:
+      name: apt-transport-https
+      state: present     
+
+               
+   - name: add kubernetes apt-key
+     apt_key:
+       url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+       state: present     
+
+               
+   - name: add kubernetes APT repository
+     apt_repository:
+            repo: deb http://apt.kubernetes.io/kubernetes-xenial main
+            state: present
+            filename: kubernetes     
+
+                                          
+   - name: install kubectl
+     apt:
+      name: kubectl=1.14.0-00
+      state: present
+      force: yes     
+
+   - name: Downloading minikube
+     get_url:
+         url: https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+         dest: /root/ansible/minikube-linux-amd64     
+
+   - name: changing the permissions to minikube file
+     file:
+      path: /root/ansible/minikube-linux-amd64
+      mode: 0755
+      owner: root
+      group: root     
+                                            
+                                               
+   - name: copying the minikube file to bin folder
+     copy:
+       src: /root/ansible/minikube-linux-amd64
+       dest: /usr/local/bin/minikube
+       mode: 0755     
+                                                         
+   - name: Installing minikube
+     apt:
+       name: /usr/local/bin/minikube/minikube-linux-amd64
+       state: present
+       update_cache: true
+       force: yes
