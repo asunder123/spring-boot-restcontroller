@@ -1,5 +1,16 @@
-FROM openjdk:8
-FROM maven:3.3.3-jdk-8
-ADD / target/app.jar
-EXPOSE 8085
-ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","target/app.jar"]
+FROM maven:3.6.3-open-jdk-11-slim AS BUILDER
+ARG VERSION=0.0.1-VERSION
+WORKDIR /build/
+COPY pom.xml /build/
+COPY src /build/src/
+
+RUN mvn clean package
+COPY target/spring-boot-restcontroller-${VERSION} target/app.jar
+
+FROM openjdk: 11.0.11-jre-slim
+WORKDIR /app/
+
+COPY --from=BUILDER /build/target/app.jar /app/
+CMD java -jar /app/app.jar
+
+
