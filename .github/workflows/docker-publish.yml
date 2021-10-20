@@ -75,4 +75,4 @@ jobs:
               sudo docker login -u asunder123 -p Docker@123
               sudo ls -ltr
               sudo docker build .
-              sudo docker run  -p 8083:8083 ghcr.io/asunder123/spring-boot-restcontroller:master
+              sudo docker run  -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
