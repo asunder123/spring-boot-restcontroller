@@ -4,4 +4,4 @@ ADD / app.jar
 CMD mvn clean install
 CMD ls -ltr
 EXPOSE 8085
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
