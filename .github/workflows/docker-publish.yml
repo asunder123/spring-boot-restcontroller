@@ -76,4 +76,4 @@ jobs:
               sudo ls -ltr
               sudo chmod +x Dockerfile
               sudo docker build .
-              sudo docker run  -p 8085:8085 -e JAVA_OPTS=-Dserver.port=8085 ghcr.io/asunder123/spring-boot-restcontroller:master
+              sudo docker run  -p 8085:8085 -e "JAVA_OPTS=-Ddebug -Xmx128m" ghcr.io/asunder123/spring-boot-restcontroller:master
