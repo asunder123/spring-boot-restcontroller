@@ -1,5 +1,6 @@
 FROM openjdk:8
+RUN mvn package
 CMD mvn clean install
-ADD / spring-boot-restcontroller.jar
+ADD / app.jar
 EXPOSE 8085
-ENTRYPOINT ["java","-jar","spring-boot-restcontroller.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
