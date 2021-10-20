@@ -1,7 +1,6 @@
 FROM openjdk:8
 FROM maven:3.3.3-jdk-8
-ADD / app.jar
-CMD mvn clean install
-CMD ls -ltr
+ADD target/*.jar app.jar
+RUN bash -c 'touch target/app.jar'
 EXPOSE 8085
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","target/app.jar"]
