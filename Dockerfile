@@ -1,10 +1,4 @@
 FROM openjdk:8-jdk-alpine
 WORKDIR /
-
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-RUN sudo ./mvnw dependency:go-offline
-
-COPY src ./src
-
-CMD ["sudo","./mvnw", "spring-boot:run"]
+COPY target/spring-boot-restcontroller-0.0.1.jar spring-boot-restcontroller-0.0.1.jar
+ENTRYPOINT ["java","-jar","/message-server-1.0.0.jar"]
