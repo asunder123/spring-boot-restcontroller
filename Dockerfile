@@ -18,5 +18,5 @@ MAINTAINER anand.sunder@capgemini.com
 EXPOSE 8085
 
 #default command
-CMD java -jar /data/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar
+CMD java -jar /data/spring-boot-restcontroller.jar
 
