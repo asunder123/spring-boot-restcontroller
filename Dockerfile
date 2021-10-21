@@ -5,7 +5,7 @@ COPY pom.xml /build/
 COPY src /build/src/
 
 RUN mvn clean package
-COPY target/spring-boot-restcontroller-${VERSION} target/app.jar
+COPY target/spring-boot-restcontroller-${VERSION}.jar target/app.jar
 
 FROM openjdk: 11.0.11-jre-slim
 WORKDIR /app/
