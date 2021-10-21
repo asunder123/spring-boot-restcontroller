@@ -4,6 +4,6 @@ FROM maven:3.5.2-jdk-8
 COPY src/main/java/es/macero/dev/ .
 COPY pom.xml .
 #RUN mvn clean package
-RUN javac SpringBootRestcontrollerExampleApplication.java
+#RUN javac SpringBootRestcontrollerExampleApplication.java
 EXPOSE 8085
 CMD ["java", "SpringBootRestcontrollerExampleApplication"]
