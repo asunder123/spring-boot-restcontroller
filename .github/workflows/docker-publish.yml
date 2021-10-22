@@ -67,7 +67,7 @@ jobs:
         shell: bash
         run: sudo docker images
         
-      - name: Run docker image
+      - name: Publish docker image
         working-directory: ${{runner.workspace-directory}}
         shell: bash
         run: |
@@ -79,3 +79,13 @@ jobs:
               #sudo ufw allow 8085
               #sudo docker run  -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
               #curl http://localhost:8085
+      
+      - name: List docker processes
+        working-directory: ${{runner.workspace-directory}}
+        shell: bash
+        run: sudo docker ps -a
+      
+      - name: Netstat 
+        working-directory: ${{runner.workspace-directory}}
+        shell: bash
+        run:  sudo netstat -ano
