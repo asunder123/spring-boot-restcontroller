@@ -5,4 +5,4 @@ RUN wget --user=admin --password=admin123 http://192.168.29.93:8081/repository/m
 COPY . /opt/java
 #ADD /opt/java/spring-boot-restcontroller-example-3.3.3-debug.jar /opt/java/app.jar
 EXPOSE 8085
-CMD ["java", "-jar","/opt/java/app.jar"]
+CMD ["java", "-jar","/opt/java/spring-boot-restcontroller-example-3.3.3-debug.jar"]
