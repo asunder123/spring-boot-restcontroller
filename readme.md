@@ -72,12 +72,21 @@ Confirmation of Shutdown via Logs :
 
 ![image](https://user-images.githubusercontent.com/50335583/137796607-ed60ca8b-c759-48cc-9476-2cc811b34c4e.png)
 
+
+## Configuration changes to pom.xml and prometheus.yml : 
+# pom.xml:
+![image](https://user-images.githubusercontent.com/50335583/138557758-9b698ec5-76cc-47d4-a7c7-86910b2b9d17.png)
+
+# prometheus.yml:
+![image](https://user-images.githubusercontent.com/50335583/138557794-5990fec7-7986-4977-9bfc-d24c4f2a9b17.png)
+
 ## CPU attack assault in Spring Boot Application:
 
 ![image](https://user-images.githubusercontent.com/50335583/138557599-1ab0b52e-e254-4f15-a2d2-03fad460f5bc.png)
 
 ## Spike in Cpu Utilization seen in Prometheus:
-![image](https://user-images.githubusercontent.com/50335583/138557636-ce8d1905-9e50-423a-82e4-ada31d72403a.png)
+![image](https://user-images.githubusercontent.com/50335583/138557739-0c9b0ae5-a9b3-4348-9911-23b4802f494e.png)
+
 
 
 
