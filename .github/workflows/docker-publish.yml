@@ -81,10 +81,8 @@ jobs:
               sudo docker run -d -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
               sudo netstat -ano | grep 8085
               sudo nc -vz 0.0.0.0 8085
-              #sudo curl http://localhost:8085/actuator/chaosmonkey
-              #sudo curl http://localhost:8085/actuator/chaosmonkey
-              #sudo docker run  -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
-              #curl http://localhost:8085
+              sudo curl http://localhost:8085/actuator/chaosmonkey
+
       
       - name: List docker processes
         working-directory: ${{runner.workspace-directory}}
