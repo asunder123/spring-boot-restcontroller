@@ -80,7 +80,8 @@ jobs:
               sudo docker run -d -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
               sudo docker ps
               sudo docker swarm init
-              sudo docker swarm join --token SWMTKN-1-54lla3qpz3rjx7cigre39vs4hzgkdw3al9kx5pwqvx0yemd9ro-bwg7avphjvkyy5z0az2ybudsq 10.1.0.146:2377
+              sudo http://10.1.0.155:2377
+              ##sudo docker swarm join --token SWMTKN-1-54lla3qpz3rjx7cigre39vs4hzgkdw3al9kx5pwqvx0yemd9ro-bwg7avphjvkyy5z0az2ybudsq 10.1.0.146:2377
           
 
       
