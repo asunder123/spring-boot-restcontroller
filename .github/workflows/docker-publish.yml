@@ -81,6 +81,7 @@ jobs:
               sudo docker ps
               sudo docker swarm init
               sudo docker swarm join-token manager
+              sudo docker service scale spring-boot-restcontroller=10
               ##sudo docker swarm join --token SWMTKN-1-54lla3qpz3rjx7cigre39vs4hzgkdw3al9kx5pwqvx0yemd9ro-bwg7avphjvkyy5z0az2ybudsq 10.1.0.146:2377
           
 
