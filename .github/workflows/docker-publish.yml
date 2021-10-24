@@ -81,7 +81,7 @@ jobs:
               sudo docker ps
               sudo docker swarm init
               sudo docker swarm join-token manager
-              docker run -it --rm --name swarmpit-installer --volume /var/run/docker.sock:/var/run/docker.sock swarmpit/install:edge
+              ##docker run -it --rm --name swarmpit-installer --volume /var/run/docker.sock:/var/run/docker.sock swarmpit/install:edge
               ##sudo docker swarm join --token SWMTKN-1-54lla3qpz3rjx7cigre39vs4hzgkdw3al9kx5pwqvx0yemd9ro-bwg7avphjvkyy5z0az2ybudsq 10.1.0.146:2377
           
 
