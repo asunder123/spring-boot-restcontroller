@@ -75,13 +75,13 @@ jobs:
               sudo docker login -u asunder123 -p Docker@123
               sudo ls -ltr
               sudo chmod +x Dockerfile
+              sudo ufw allow 8085/tcp
+              sudo ufw allow 8085/http
               sudo docker build .
               sudo docker run -d -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
-              sudo ufw allow 8085/tcp
-              sudo netstat -ano | grep 8085
-              sudo nc -vz 0.0.0.0 8085
-              sudo iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 8085 -j ACCEPT
-              sudo curl http://127.0.0.1:8085/actuator/chaosmonkey
+              sudo docker ps
+              sudo docker swarm init
+          
 
       
       - name: List docker processes
