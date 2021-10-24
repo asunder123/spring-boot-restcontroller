@@ -79,7 +79,8 @@ jobs:
               sudo ufw allow http 
               sudo ufw allow 8085
               sudo docker run -d -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
-              netstat -ano | grep 8085
+              sudo netstat -ano | grep 8085
+              sudo nc -vz 0.0.0.0 8085
               #sudo curl http://localhost:8085/actuator/chaosmonkey
               #sudo curl http://localhost:8085/actuator/chaosmonkey
               #sudo docker run  -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
