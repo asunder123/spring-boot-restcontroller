@@ -76,7 +76,6 @@ jobs:
               sudo ls -ltr
               sudo chmod +x Dockerfile
               sudo ufw allow 8085/tcp
-              sudo ufw allow 8085/http
               sudo docker build .
               sudo docker run -d -p 8085:8085 ghcr.io/asunder123/spring-boot-restcontroller:master
               sudo docker ps
