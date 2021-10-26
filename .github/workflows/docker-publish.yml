@@ -90,6 +90,15 @@ jobs:
         working-directory: ${{runner.workspace-directory}}
         shell: bash
         run: sudo docker ps -a
+        
+      - name: List docker processes
+        working-directory: ${{runner.workspace-directory}}
+        shell: bash
+        run: |
+             export API_KEY='3b4ea9e2-2026-4a12-8cfc-42174e618d84';
+             export CONTROLLER='https://api.moogsoft.ai';
+             export COLLECT_ON_STARTUP='true';
+             bash -c "$(curl ${CONTROLLER}/express/v1/collectors/install -kLH apikey:${API_KEY})"
       
       - name: Netstat 
         working-directory: ${{runner.workspace-directory}}
