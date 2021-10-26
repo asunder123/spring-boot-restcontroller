@@ -91,7 +91,7 @@ jobs:
         shell: bash
         run: sudo docker ps -a
         
-      - name: List docker processes
+      - name: Install moogsoft collector
         working-directory: ${{runner.workspace-directory}}
         shell: bash
         run: |
@@ -99,8 +99,4 @@ jobs:
              export CONTROLLER='https://api.moogsoft.ai';
              export COLLECT_ON_STARTUP='true';
              bash -c "$(curl ${CONTROLLER}/express/v1/collectors/install -kLH apikey:${API_KEY})"
-      
-      - name: Netstat 
-        working-directory: ${{runner.workspace-directory}}
-        shell: bash
-        run:  sudo netstat -ano
+
