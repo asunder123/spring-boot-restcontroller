@@ -99,5 +99,6 @@ jobs:
              export CONTROLLER='https://api.moogsoft.ai';
              export COLLECT_ON_STARTUP='true';
              bash -c "$(curl ${CONTROLLER}/express/v1/collectors/install -kLH apikey:${API_KEY})"
+             export MOOGSOFT_HOME=/opt/moogsoft
              sudo /opt/moogsoft/collector/bin/collector start
 
