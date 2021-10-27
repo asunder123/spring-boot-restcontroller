@@ -93,6 +93,8 @@ Confirmation of Shutdown via Logs :
 
 ## Injected Latency attack :
 ![image](https://user-images.githubusercontent.com/50335583/139101615-8359c222-2531-401e-8499-3803e7f870a4.png)
+![image](https://user-images.githubusercontent.com/50335583/139106128-d65affea-d21f-4aa2-9315-b9751b1ec119.png)
+
 
 
 
