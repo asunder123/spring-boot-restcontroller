@@ -1,0 +1,32 @@
+[1;34m[0m
+ [1;34m======================[1;32m SolarWinds Snap Agent Installer [1;34m=======================[0m
+[1;34m  This script will walk you through the installation of SolarWinds Snap Agent.[0m
+[1;34m[0m
+[1;34m  For detailed instructions, FAQ, and full documentation:[0m
+[1;33m   http://docs.appoptics.com[0m
+[1;34m[0m
+[1;34m  If you have any questions or problems, please contact us:[0m
+[1;33m   email: technicalsupport@solarwinds.com[0m
+[1;34m ===============================================================[0m
+
+[1;33mAre you ready to install SolarWinds Snap Agent? (Y/n)[0m
+ [1;34m======================[1;32m SolarWinds Snap Agent Install [1;34m=======================[0m
+[1;32m *  INFO[0m: Installing the SolarWinds Snap Agent package ...
+[1;33m *  WARN[0m: It looks like SolarWinds Snap Agent is already installed!
+[1;33m *  WARN[0m: Refer to the documentation for configuring SolarWinds Snap Agent: http://docs.appoptics.com/kb/host_infra/host_agent
+[1;33mWould you like to upgrade SolarWinds Snap Agent? (Note: only upgrade of package would be performed) (Y/n) (Default: Y)[0mReading package lists...
+Building dependency tree...
+Reading state information...
+solarwinds-snap-agent is already the newest version (4.4.0.1232).
+0 upgraded, 0 newly installed, 0 to remove and 54 not upgraded.
+1 not fully installed or removed.
+After this operation, 0 B of additional disk space will be used.
+Setting up grafana-enterprise (8.2.2) ...
+Restarting grafana-server service...System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+dpkg: error processing package grafana-enterprise (--configure):
+ installed grafana-enterprise package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ grafana-enterprise
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+

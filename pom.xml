@@ -104,7 +104,18 @@
     <version>2.5</version>
     <scope>provided</scope>
 </dependency>
-
+<dependency>
+	    <groupId>com.github.tomakehurst</groupId>
+		        <artifactId>wiremock-jre8</artifactId>
+				    <version>2.32.0</version>
+					        <scope>test</scope>
+					</dependency>
+					<dependency>
+						  <groupId>com.datadoghq</groupId>
+							    <artifactId>datadog-api-client</artifactId>
+								      <version>1.2.0</version>
+									        <scope>compile</scope>
+									</dependency>
 	</dependencies>
 
 	<build>
@@ -144,6 +155,26 @@
       <artifactId>nexus-staging-maven-plugin</artifactId>
       <version>1.6.6</version>
       <extensions>true</extensions>
+      <executions>
+						         <execution>
+								       <id>copy</id>
+									             <phase>package</phase>
+											          
+																	       <configuration>
+																		               <artifactItems>
+																				                 <artifactItem>
+																							             <groupId>com.appoptics.agent.java</groupId>
+																									                 <artifactId>appoptics-agent</artifactId>
+																												             <version>${appoptics.agent.version}</version>
+																														                 <type>jar</type>
+																																	             <overWrite>true</overWrite>
+																																			                 <outputDirectory>${project.basedir}/agent</outputDirectory>
+																																						             <destFileName>appoptics-agent.jar</destFileName>
+																																								               </artifactItem>
+																																										               </artifactItems>
+																																												             </configuration>
+																																														         </execution>
+																																																   </executions>
     </plugin>
 		</plugins>
 	</build>
