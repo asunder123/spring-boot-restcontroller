@@ -1,5 +1,7 @@
 package es.macero.dev.restexample;
+//import org.springframework.metrics.export.prometheus.*;
 
+//@PrometheusEndpointConfiguration
 class SpanishGreeting {
 
     private String message;

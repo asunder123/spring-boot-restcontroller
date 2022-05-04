@@ -6,18 +6,28 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+//import java.util.*;
+//import org.springframework.metrics.annotation.Timed;
+//import org.springframework.metrics.instrument.MeterRegistry;
 
 @RestController
 @RequestMapping("/spanish-greetings")
+//@Timed(value="greetingscrape",longTask=true)
 public class SpanishGreetingController {
 
     private List<SpanishGreeting> spanishGreetings;
 
+    //Map<Integer,String> greeting = new Map<Integer, String>();
+    
+    /* Add Meter registry variable enabling prometheys LongTask metrics */
     public SpanishGreetingController() {
         spanishGreetings = new ArrayList<>();
         spanishGreetings.add(new SpanishGreeting("Hola!"));
         spanishGreetings.add(new SpanishGreeting("Qué tal?!"));
         spanishGreetings.add(new SpanishGreeting("Buenas!"));
+	//registry.counter("counter");
+
+
     }
 
     @GetMapping("/{id}")
