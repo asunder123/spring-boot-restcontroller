@@ -8,10 +8,15 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-import org.springframework.metrics.export.prometheus.EnablePrometheusMetrics;
+//import org.springframework.metrics.export.prometheus.EnablePrometheusMetrics;
+//import io.prometheus.client.*;
 //import io.prometheus.client.spring.boot.EnablePrometheusEndpoint;
 //import io.prometheus.client.spring.boot.EnableSpringBootMetricsCollector;
-
+//import org.springframework.metrics.instrument.MeterRegistry;
+//import org.springframework.boot.actuate.autoconfigure.metrics;
+//import org.springframework.beans.factory.annotation;
+import io.micrometer.core.instrument.MeterRegistry;
+//import io.micrometer.spring.autoconfigure.MeterRegistryCustomizer;
 
 @SpringBootApplication
 @EnableSwagger2
@@ -24,7 +29,7 @@ public class SpringBootRestcontrollerExampleApplication {
 					SpringApplication.run(SpringBootRestcontrollerExampleApplication.class, args);
 						}
 
-			@Bean
+			        @Bean
 				public Docket api() {
 							return new Docket(DocumentationType.SWAGGER_2)
 												.select()
@@ -32,5 +37,6 @@ public class SpringBootRestcontrollerExampleApplication {
 																				.paths(PathSelectors.regex("/spanish-greeting.*"))
 																								.build();
 								}
+
 
 }
